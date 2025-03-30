@@ -22,10 +22,12 @@ const App: React.FC = () => {
 
   const [error, setError] = useState<string | null>(null);
 
+  const baseUrl = process.env.REACT_APP_API_BASE_URL;
+
   const fetchWeather = async (city: string, country?: string) => {
     try {
       setError(null);
-      const response = await fetch(`http://127.0.0.1:5000/api/weather?city=${city}${country ? `&country=${country}` : ''}`);
+      const response = await fetch(`${baseUrl}/api/weather?city=${city}${country ? `&country=${country}` : ''}`);
       if (!response.ok) {
         throw new Error('Failed to fetch weather data');
       }
@@ -39,7 +41,7 @@ const App: React.FC = () => {
 
   const fetchFilterHistory = async () => {
     try {
-      const response = await fetch('http://127.0.0.1:5000/api/history');
+      const response = await fetch(`${baseUrl}/api/history`);
       if (!response.ok) {
         throw new Error('Failed to fetch history');
       }
