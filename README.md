@@ -1,5 +1,8 @@
-# React-Express-Template
+# Weather Filtering Application
 Template for building fullstack application using React and Express
+
+## Screenshot
+![Weather App](images/weatherapp.png)
 
 ## Frontend
 
