@@ -1,6 +1,6 @@
 import React from 'react';
 
-interface Filter {
+export interface Filter {
     city: string;
     country?: string;
 }

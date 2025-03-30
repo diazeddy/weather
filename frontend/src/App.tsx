@@ -2,18 +2,8 @@ import React, { useState, useEffect } from 'react';
 import FilterForm from './components/FilterForm';
 import WeatherDisplay from './components/WeatherDisplay';
 import FilterHistory from './components/FilterHistory';
-
-interface WeatherData {
-  temperature: number;
-  humidity: number;
-  condition: string;
-  icon: string;
-}
-
-interface Filter {
-  city: string;
-  country?: string;
-}
+import { WeatherData } from './components/WeatherDisplay';
+import { Filter } from './components/FilterHistory';
 
 const App: React.FC = () => {
 
